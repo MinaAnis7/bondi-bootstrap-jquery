@@ -1,0 +1,238 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --orange-color: #ff3150;
+  --orange-hover-color: #f62040;
+  --orange-focus-color: #eb1333;
+  --gold-color: #ffc400;
+  --light-blue: #eff7fa;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #33d1cc #19283f;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", "Arial";
+}
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--dark-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--green-color);
+}
+
+/* #region Components */
+.btn-main {
+  --bs-btn-bg: var(--orange-color);
+  --bs-btn-color: var(--gold-color);
+  --bs-btn-hover-bg: var(--orange-hover-color);
+  --bs-btn-hover-color: var(--gold-color);
+  --bs-btn-active-bg: var(--orange-focus-color);
+  --bs-btn-active-color: var(--gold-color);
+}
+.section-title p {
+  font-size: 14px;
+  color: var(--green-color);
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  transform: translateX(-50%);
+  height: 1.5px;
+  background-color: var(--green-color);
+}
+.fs-sm {
+  font-size: 14px;
+}
+.color-g {
+  color: var(--green-color);
+}
+/* #endregion Components */
+
+/* #region Navbar */
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .navbar-brand {
+  width: 80px;
+}
+.navbar .nav-link {
+  color: white;
+  font-weight: 300;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--green-color);
+}
+.navbar .search-icon i {
+  cursor: pointer;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-nav {
+  --bs-scroll-height: 200px;
+}
+.navbar .btn-main {
+  --bs-btn-padding-x: 2rem;
+}
+/* #endregion Navbar */
+
+/* #region  Landing */
+.landing {
+  min-height: calc(100vh - 82.46px);
+  background-color: var(--dark-color);
+}
+@media (min-width: 992px) {
+  .landing {
+    min-height: calc(100vh - 72px);
+  }
+}
+.landing .container {
+  min-height: inherit;
+}
+/* #endregion Landing */
+
+/* #region Features */
+.feature .num-icon svg {
+  font-size: 10rem;
+  color: var(--light-blue);
+}
+.features .row > div:first-child .num-icon::after {
+  content: "\f303";
+}
+.features .row > div:nth-child(2) .num-icon::after {
+  content: "\f26c";
+}
+.features .row > div:last-child .num-icon::after {
+  content: "\f1e6";
+}
+.feature .num-icon::after {
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  color: var(--green-color);
+  font-size: 3rem;
+  bottom: 0%;
+  left: 50%;
+  z-index: 1;
+  font-weight: 900;
+  transform: translateX(-50%);
+}
+.feature h3 {
+  color: var(--gold-color);
+}
+.feature p {
+  color: var(--green-color);
+}
+/* #endregion Features */
+
+/* #region Projects */
+.projects {
+  background-color: var(--light-blue);
+}
+.projects .filters li {
+  color: var(--green-color);
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+.projects .filters li:not(.active):hover {
+  color: var(--orange-color);
+}
+.projects .filters li.active {
+  color: var(--gold-color);
+  background-color: var(--orange-color);
+  border-radius: 6px;
+}
+/* #endregion Projects */
+
+/* #region About */
+@media (min-width: 768px) {
+  .description {
+    width: 630px;
+  }
+}
+/* #endregion About */
+
+/* #region Team */
+.team {
+  background-color: var(--light-blue);
+}
+.team h2 {
+  color: var(--gold-color);
+}
+.team .grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.team .box {
+  min-height: 440px;
+}
+.team .box .name {
+  background-color: var(--green-color);
+}
+/* #endregion Team */
+
+/* #region Start Project */
+.start-project {
+  background-color: var(--dark-color);
+  height: 350px;
+}
+/* #endregion Start Project */
+
+/* #region Subs */
+.subs {
+  background-color: var(--gold-color);
+}
+.subs .text {
+  color: var(--dark-color);
+  font-weight: 500;
+}
+.subs .email-input::placeholder {
+  color: white;
+}
+.subs .btn-main {
+  --bs-btn-bg: var(--dark-color);
+  --bs-btn-color: var(--gold-color);
+  --bs-btn-hover-bg: #1e3352;
+  --bs-btn-hover-color: var(--gold-color);
+  --bs-btn-active-bg: var(--dark-color);
+  --bs-btn-active-color: var(--gold-color);
+}
+/* #endregion Subs */
+
+/* #region Footer */
+footer {
+  background-color: var(--dark-color);
+}
+.copyright span:first-child {
+  color: var(--green-color);
+}
+.copyright span:last-child {
+  color: var(--gold-color);
+}
+footer .socials svg {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+footer .socials .facebook {
+  background-color: #1877f2;
+}
+footer .socials .twitter {
+  background-color: #1da1f2;
+}
+footer .socials .github {
+  background-color: #333;
+}
+footer .socials .youtube {
+  background-color: #ff0000;
+}
+/* #endregion Footer */
